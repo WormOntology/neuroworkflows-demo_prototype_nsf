@@ -1,0 +1,31 @@
+version: "2.4"
+services:
+  db:
+    restart: always
+    image: datajoint/mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=simple
+    ports:
+      - "3306:3306"
+    extra_hosts:
+      - fakeservices.datajoint.io:127.0.0.1
+    container_name: datajoint_db
+    network_mode: host
+  intern-pull:
+    build:
+        context: ./incf-demo/tools/intern_pull
+        dockerfile: Dockerfile
+    image: intern/pull
+    network_mode: host
+  cc3d-centroids:
+    build:
+        context: ./incf-demo/tools/cc3d
+        dockerfile: Dockerfile
+    image: cc3d/centroids
+    network_mode: host
+  datajoint-push:
+    build:
+        context: ./incf-demo/tools/datajoint_push
+        dockerfile: Dockerfile
+    image: datajoint/push
+    network_mode: host

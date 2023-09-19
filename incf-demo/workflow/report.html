@@ -18,11 +18,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Nextflow workflow report for run id [furious_kay]">
+  <meta name="description" content="Nextflow workflow report for run id [romantic_miescher]">
   <meta name="author" content="Paolo Di Tommaso, Phil Ewels">
   <link rel="icon" type="image/png" href="https://www.nextflow.io/img/favicon.png" />
 
-  <title>[furious_kay] Nextflow Workflow Report</title>
+  <title>[romantic_miescher] Nextflow Workflow Report</title>
 
   <style type="text/css">
   /*!
@@ -137,7 +137,7 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
         <li class="nav-item"><a class="nav-link" href="#tasks">Tasks</a></li>
       </ul>
       <span class="navbar-text">
-        [furious_kay]
+        [romantic_miescher]
       </span>
     </div>
   </nav>
@@ -146,32 +146,56 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
     <div class="container">
 
       <h1 class="display-3">Nextflow workflow report</h1>
-      <h2 class="text-muted mb-4"><samp>[furious_kay]</samp> </h2>
+      <h2 class="text-muted mb-4"><samp>[romantic_miescher]</samp> </h2>
 
       
-          <div class="alert alert-success mb-4">
-              Workflow execution completed successfully!
+          <div class="alert alert-danger mb-4">
+              <h4>Workflow execution completed unsuccessfully!</h4>
+              <p>The exit status of the task that caused the workflow execution to fail was: <code>1</code>.</p>
+              <p>The full error message was:</p>
+              <pre>Error executing process > 'intern_pull'
+
+Caused by:
+  Process `intern_pull` terminated with an error exit status (1)
+
+Command executed:
+
+  python /app/intern_pull.py     --bossdb_uri bossdb://Kasthuri/ac4/neuron     --z_rng 25,50     --y_rng 0,512     --x_rng 0,512     --output_dir data/
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  Command 'ps' required by nextflow to collect task metrics cannot be found
+
+Work dir:
+  /Users/xenesd1/Projects/datajoint/bossdb-workflow-managers/incf-demo/workflow/work/ec/4a25545cddb5f909e3d8acef9cac52
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`</pre>
           </div>
       
 
       <dl>
         <dt>Run times</dt>
         <dd>
-          <span id="workflow_start">28-Jun-2023 16:02:19</span> - <span id="workflow_complete">28-Jun-2023 16:02:24</span>
-          (<span id="completed_fromnow"></span>duration: <strong>5s</strong>)
+          <span id="workflow_start">19-Sep-2023 10:41:30</span> - <span id="workflow_complete">19-Sep-2023 10:41:32</span>
+          (<span id="completed_fromnow"></span>duration: <strong>2.5s</strong>)
         </dd>
 
         <dl>
           <div class="progress" style="height: 1.6rem; margin: 1.2rem auto; border-radius: 0.20rem;">
-            <div style="width: 100.0%" class="progress-bar bg-success" data-toggle="tooltip" data-placement="top" title="2 tasks succeeded"><span class="text-truncate">&nbsp; 2 succeeded &nbsp;</span></div>
+            <div style="width: 0.0%" class="progress-bar bg-success" data-toggle="tooltip" data-placement="top" title="0 tasks succeeded"><span class="text-truncate">&nbsp; 0 succeeded &nbsp;</span></div>
             <div style="width: 0.0%" class="progress-bar bg-secondary" data-toggle="tooltip" data-placement="top" title="0 tasks were cached"><span class="text-truncate">&nbsp; 0 cached &nbsp;</span></div>
             <div style="width: 0.0%" class="progress-bar bg-warning" data-toggle="tooltip" data-placement="top" title="0 tasks reported and error and were ignored"><span class="text-truncate">&nbsp; 0 ignored &nbsp;</span></div>
-            <div style="width: 0.0%" class="progress-bar bg-danger" data-toggle="tooltip" data-placement="top" title="0 tasks failed"><span class="text-truncate">&nbsp; 0 failed &nbsp;</span></div>
+            <div style="width: 100.0%" class="progress-bar bg-danger" data-toggle="tooltip" data-placement="top" title="1 tasks failed"><span class="text-truncate">&nbsp; 1 failed &nbsp;</span></div>
           </div>
         </dl>
 
         <dt>Nextflow command</dt>
-        <dd><pre class="nfcommand"><code>nextflow run boss_intern.nf -with-report boss_report.html</code></pre></dd>
+        <dd><pre class="nfcommand"><code>nextflow run -with-report report.html incf-demo.nf</code></pre></dd>
       </dl>
 
       <dl class="row small">
@@ -179,26 +203,26 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
         <dd class="col-sm-9"><samp>(a few seconds)</samp></dd>
 
         <dt class="col-sm-3">Launch directory</dt>
-        <dd class="col-sm-9"><samp>/Users/xenesd1/Projects/bossDB/code/bossdb-workflow-managers/nextflow_script</samp></dd>
+        <dd class="col-sm-9"><samp>/Users/xenesd1/Projects/datajoint/bossdb-workflow-managers/incf-demo/workflow</samp></dd>
 
         <dt class="col-sm-3">Work directory</dt>
-        <dd class="col-sm-9"><samp>/Users/xenesd1/Projects/bossDB/code/bossdb-workflow-managers/nextflow_script/work</samp></dd>
+        <dd class="col-sm-9"><samp>/Users/xenesd1/Projects/datajoint/bossdb-workflow-managers/incf-demo/workflow/work</samp></dd>
 
         <dt class="col-sm-3">Project directory</dt>
-        <dd class="col-sm-9"><samp>/Users/xenesd1/Projects/bossDB/code/bossdb-workflow-managers/nextflow_script</samp></dd>
+        <dd class="col-sm-9"><samp>/Users/xenesd1/Projects/datajoint/bossdb-workflow-managers/incf-demo/workflow</samp></dd>
 
         
           <dt class="col-sm-3">Script name</dt>
-          <dd class="col-sm-9"><samp>boss_intern.nf</samp></dd>
+          <dd class="col-sm-9"><samp>incf-demo.nf</samp></dd>
         
 
         
           <dt class="col-sm-3">Script ID</dt>
-          <dd class="col-sm-9"><code>23e4a9eb224bb5d57a7fa611de892748</code></dd>
+          <dd class="col-sm-9"><code>da47d6fd5f2bfd369cde1bf97831459c</code></dd>
         
 
         <dt class="col-sm-3">Workflow session</dt>
-        <dd class="col-sm-9"><code>c2f083f9-57e2-48b4-a634-d17ce1afbeb0</code></dd>
+        <dd class="col-sm-9"><code>78040e74-a660-434f-8d42-d713a7071dc1</code></dd>
 
         
 
@@ -1030,7 +1054,7 @@ $(function() {
 
   // Nextflow report data
   window.data = { "trace":[
-{"task_id":"1","hash":"cd\/4b2a97","native_id":"18985","process":"downloadData","module":"-","container":"-","tag":"-","name":"downloadData","status":"COMPLETED","exit":"0","submit":"1687982540631","start":"1687982540675","complete":"1687982544032","duration":"3401","realtime":"3000","%cpu":"-","%mem":"-","rss":"-","vmem":"-","peak_rss":"-","peak_vmem":"-","rchar":"-","wchar":"-","syscr":"-","syscw":"-","read_bytes":"-","write_bytes":"-","attempt":"1","workdir":"\/Users\/xenesd1\/Projects\/bossDB\/code\/bossdb-workflow-managers\/nextflow_script\/work\/cd\/4b2a973adafb14b17770d97b21e20a","script":"\n    #!..\/..\/..\/venv\/bin\/python\n    from multiprocessing import freeze_support\n\n    import numpy as np\n    import os\n    from intern import array\n    from intern.remote.boss import BossRemote\n\n    # Why do we need this?\n    freeze_support()\n\n    config = {\n        \"protocol\": \"https\",\n        \"host\": \"api.bossdb.io\",\n        \"token\": \"public\",\n    }\n\n    # Specify the BOSSdb URI\n    bossdb_uri = \"bossdb:\/\/nguyen_thomas2022\/cb2\/em\"\n\n    # Save a cutout to a numpy array in ZYX order:\n    em = array(bossdb_uri, boss_config=config)\n    data = em[600:606, 111362:112386, 123826:124850]\n\n    # Convert the downloaded data to a NumPy array\n    numpy_array = np.array(data)\n    \n    if not os.path.exists(\".\/output\"):\n        os.mkdir(\".\/output\")\n\n    np.save(\".\/output\/data.npy\", numpy_array)\n    ","scratch":"-","queue":"-","cpus":"1","memory":"-","disk":"-","time":"-","env":"-","error_action":"-","vol_ctxt":"-","inv_ctxt":"-","hostname":"-"},{"task_id":"2","hash":"e6\/debd00","native_id":"19022","process":"convertToTIFF","module":"-","container":"-","tag":"-","name":"convertToTIFF","status":"COMPLETED","exit":"0","submit":"1687982544112","start":"1687982544134","complete":"1687982544770","duration":"658","realtime":"0","%cpu":"-","%mem":"-","rss":"-","vmem":"-","peak_rss":"-","peak_vmem":"-","rchar":"-","wchar":"-","syscr":"-","syscw":"-","read_bytes":"-","write_bytes":"-","attempt":"1","workdir":"\/Users\/xenesd1\/Projects\/bossDB\/code\/bossdb-workflow-managers\/nextflow_script\/work\/e6\/debd00ab1c78660c9af896349b6cfc","script":"\n    #!..\/..\/..\/venv\/bin\/python\n\n    import numpy as np\n    import tifffile as tiff\n\n    numpy_array = np.load(\".\/output\/data.npy\")\n\n    # Iterate over each slice in the data cube\n    if numpy_array.ndim == 2:\n        tiff.imsave(f\".\/output\/slice_0.tiff\", numpy_array)\n    else:\n        for i, slice_data in enumerate(numpy_array):\n            # Save the slice as a TIFF image\n            tiff.imsave(f\".\/output\/slice_{i}.tiff\", slice_data)\n    ","scratch":"-","queue":"-","cpus":"1","memory":"-","disk":"-","time":"-","env":"-","error_action":"-","vol_ctxt":"-","inv_ctxt":"-","hostname":"-"}], "summary":[{"cpuUsage":null,"process":"downloadData","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":{"mean":3000,"min":3000,"q1":3000,"q2":3000,"q3":3000,"max":3000,"minLabel":"downloadData","maxLabel":"downloadData","q1Label":"downloadData","q2Label":"downloadData","q3Label":"downloadData"},"writes":null},{"cpuUsage":null,"process":"convertToTIFF","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null}] };
+{"task_id":"1","hash":"ec\/4a2554","native_id":"60547","process":"intern_pull","module":"-","container":"intern\/pull","tag":"-","name":"intern_pull","status":"FAILED","exit":"1","submit":"1695134491526","start":"1695134491603","complete":"1695134492634","duration":"1108","realtime":"1031","%cpu":"-","%mem":"-","rss":"-","vmem":"-","peak_rss":"-","peak_vmem":"-","rchar":"-","wchar":"-","syscr":"-","syscw":"-","read_bytes":"-","write_bytes":"-","attempt":"1","workdir":"\/Users\/xenesd1\/Projects\/datajoint\/bossdb-workflow-managers\/incf-demo\/workflow\/work\/ec\/4a25545cddb5f909e3d8acef9cac52","script":"\n    python \/app\/intern_pull.py     --bossdb_uri bossdb:\/\/Kasthuri\/ac4\/neuron     --z_rng 25,50     --y_rng 0,512     --x_rng 0,512     --output_dir data\/     ","scratch":"-","queue":"-","cpus":"1","memory":"-","disk":"-","time":"-","env":"-","error_action":"TERMINATE","vol_ctxt":"-","inv_ctxt":"-","hostname":"-"}], "summary":[{"cpuUsage":null,"process":"intern_pull","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":{"mean":1031,"min":1031,"q1":1031,"q2":1031,"q3":1031,"max":1031,"minLabel":"intern_pull","maxLabel":"intern_pull","q1Label":"intern_pull","q2Label":"intern_pull","q3Label":"intern_pull"},"writes":null}] };
 
   </script>
 
