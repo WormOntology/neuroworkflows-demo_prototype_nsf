@@ -16,3 +16,8 @@ This repo is a example of how to use nextflow to quickly run scalable and contai
 
 Simple run the `set-up.sh` script to install nextflow, add it to your path, and run the docker-compose YAML.
 
+## Acknowledgements and References
+
+- [Seung Lab's cc3d](https://github.com/seung-lab/connected-components-3d) 
+- [DataJoint](https://datajoint.com/)
+- [BossDB](https://bossdb.org/)
