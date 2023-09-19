@@ -5,11 +5,8 @@ services:
     image: datajoint/mysql:8.0
     environment:
       - MYSQL_ROOT_PASSWORD=simple
-    ports:
-      - "3306:3306"
     extra_hosts:
       - fakeservices.datajoint.io:127.0.0.1
-    container_name: datajoint_db
     network_mode: host
   intern-pull:
     build:
