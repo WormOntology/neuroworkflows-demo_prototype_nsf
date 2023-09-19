@@ -16,5 +16,7 @@ RUN pip install -r requirements.txt
 # Tool specific configs
 COPY intern_pull.py /app/intern_pull.py
 
+# Need this for nextflow report
+RUN apt install procps -yqq
 # Nextflow docker execution does not support entrypoints
 #ENTRYPOINT [ "python", "/app/intern_pull.py"]
