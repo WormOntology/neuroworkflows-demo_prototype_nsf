@@ -7,4 +7,4 @@ curl -s https://get.nextflow.io | bash
 export PATH=$PATH:$(pwd)
 
 # Step 3: Run Docker Compose
-docker-compose up -d
+docker compose up -d

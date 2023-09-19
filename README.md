@@ -15,6 +15,7 @@ This repo is a example of how to use nextflow to quickly run scalable and contai
 ## Requirements
 
 1. docker and docker-compose
+2. Java `jdk` version 11 or above 
 2. POSIX compatible system to download and run `nextflow` in the command line.
 
 ## How to run
