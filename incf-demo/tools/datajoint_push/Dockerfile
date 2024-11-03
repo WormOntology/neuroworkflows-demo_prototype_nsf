@@ -4,8 +4,8 @@ USER root
 
 # JPN added
 RUN apt-get update --fix-missing -qq \
-&& apt-get install gcc git -yqq \
-&& apt-get clean && python3-pip 
+&& apt-get install gcc git python3-pip -yqq \
+&& apt-get clean  
 
 RUN pip install --upgrade pip
 

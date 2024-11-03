@@ -2,7 +2,9 @@
 # docker run --rm intern/pull
 # Boilerplate
 
-FROM python:3.9.17-slim
+#FROM python:3.9.17-slim
+FROM python:3.10-slim
+
 RUN pip install --upgrade pip
 
 # Project-specific configs

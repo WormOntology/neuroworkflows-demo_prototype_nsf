@@ -1,4 +1,7 @@
-FROM python:3.9.17-slim
+#FROM python:3.9.17-slim
+# JPN
+FROM python:3.10-slim
+
 RUN pip install --upgrade pip
 
 RUN apt-get update --fix-missing -qq \
