@@ -24,19 +24,19 @@ services:
     network_mode: host
   intern-pull:
     build:
-        context: ./worms-demo/tools/intern_pull
+        context: ./incf-demo/tools/intern_pull
         dockerfile: Dockerfile
     image: intern/pull
     network_mode: host
   cc3d-centroids:
     build:
-        context: ./worms-demo/tools/cc3d
+        context: ./incf-demo/tools/cc3d
         dockerfile: Dockerfile
     image: cc3d/centroids
     network_mode: host
   datajoint-push:
     build:
-        context: ./worms-demo/tools/datajoint_push
+        context: ./incf-demo/tools/datajoint_push
         dockerfile: Dockerfile
     image: datajoint/push
     network_mode: host

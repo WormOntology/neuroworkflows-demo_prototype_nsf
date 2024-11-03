@@ -18,6 +18,16 @@ def generate_centroids(input_file, output_dir, connectivity, threshold):
     out_dir = Path(output_dir)
     out_dir.mkdir(exist_ok=True, parents=True)
 
+    # with open(out_dir/"tagouts.txt",'w') as f:
+    #     print('I AM CENTROID!!!!!',file=f)
+
+    # with open(out_dir/"annotations.pkl", 'wb') as pkl:
+    #     pickle.dump(stats, pkl) # JPN added labels to save
+
+    # with open(out_dir/"labels.pkl", 'wb') as pkl:
+    #     pickle.dump(labels, pkl) # JPN added labels to save
+
+
     with open(out_dir/"annotations.pkl", 'wb') as pkl:
         pickle.dump([stats,labels], pkl) # JPN added labels to save
 

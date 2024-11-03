@@ -16,4 +16,6 @@ fi
 docker-compose down -v --rmi all --remove-orphans
 docker compose up -d 
 # JPN
+#docker compose up -d --build --force-recreate --no-deps
+# JPN
 #docker compose up --platform linux/arm64 -d 

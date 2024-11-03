@@ -31,7 +31,7 @@ def upload_annotations(input_file, host, user, password):
     comp = Components()
 
     with open(input_file, 'rb') as pkl:
-        stats = pickle.load(pkl)
+        [stats,labels] = pickle.load(pkl) # JPN added labels
 
     data = pd.DataFrame(
         {
