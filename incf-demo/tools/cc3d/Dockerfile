@@ -2,11 +2,17 @@
 # JPN
 FROM python:3.10-slim
 
-RUN pip install --upgrade pip
+
+# RUN apt-get update --fix-missing -qq \
+# && apt-get install gcc git python3-pip -yqq \
+# && apt-get clean
 
 RUN apt-get update --fix-missing -qq \
 && apt-get install gcc git -yqq \
 && apt-get clean
+
+RUN pip install --upgrade pip
+
 
 # Project-specific configs
 WORKDIR /app/

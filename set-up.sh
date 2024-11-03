@@ -7,9 +7,13 @@ then
     curl -s https://get.nextflow.io | bash
     # Add Nextflow to the PATH environment variable
     export PATH=$PATH:$(pwd)
-else
+elsed
     echo "Nextflow is already installed"
 fi
 
 # Run Docker Compose
-docker compose up -d
+# JPN prune to restart
+docker-compose down -v --rmi all --remove-orphans
+docker compose up -d 
+# JPN
+#docker compose up --platform linux/arm64 -d 

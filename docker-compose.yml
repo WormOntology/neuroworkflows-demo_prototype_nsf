@@ -1,12 +1,26 @@
-version: "2.4"
+#version: "2.4"
 services:
   db:
     restart: always
     image: datajoint/mysql:8.0
     environment:
+    # JPN
       - MYSQL_ROOT_PASSWORD=simple
+      # JPN
+      #- MYSQL_ROOT_PASSWORD='123'
+      #- MYSQL_ROOT_HOST='172.18.0.1'
+      #- MYSQL_ROOT_HOST='127.0.0.1'
+      #- MYSQL_ROOT_HOST=%
+      #- MYSQL_ROOT_HOST=localhost:3306
+    # JPN
+    #platform: linux/arm64
     extra_hosts:
       - fakeservices.datajoint.io:127.0.0.1
+      #- fakeservices.datajoint.io:172.18.0.1
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
     network_mode: host
   intern-pull:
     build:
@@ -26,3 +40,7 @@ services:
         dockerfile: Dockerfile
     image: datajoint/push
     network_mode: host
+    depends_on:
+      db:
+        condition: service_healthy    # JPN
+    #platform: linux/arm64
