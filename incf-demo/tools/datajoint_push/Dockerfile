@@ -1,11 +1,14 @@
 FROM datajoint/datajoint
-RUN pip install --upgrade pip
 
 USER root
 
+# JPN added
 RUN apt-get update --fix-missing -qq \
 && apt-get install gcc git -yqq \
-&& apt-get clean
+&& apt-get clean && python3-pip 
+
+RUN pip install --upgrade pip
+
 
 # Project-specific configs
 WORKDIR /app/
