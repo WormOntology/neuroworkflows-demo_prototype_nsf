@@ -1,4 +1,0 @@
-##git+https://github.com/jhuapl-boss/intern.git
-# JPN
-intern
-cloud-volume
